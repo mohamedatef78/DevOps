@@ -257,8 +257,7 @@ Resources:
         Statement:
         - Effect: Allow
           Action:
-          - s3:Get*
-          - s3:List*
+          - s3:*
           Resource: "*"
       Roles:
       - Ref: S3BucketsRole
@@ -279,10 +278,10 @@ Resources:
           apt update -y
           apt-get install unzip awscli -y
           apt install  apache2 -y
-          systemctl start apache2.service
           cd /var/www/html
-          aws s3 cp .\udacity.zip s3://udagram-tefa 
+          aws s3 cp  s3://udagram-tefa/udacity.zip
           unzip -o udacity.zip
+          systemctl start apache2.service
       ImageId:  ami-0b0154d3d8011b0cd #ami-003634241a8fcdec0 #ami-00f1e37d20049f858
       IamInstanceProfile: !Ref S3BucketsInstanceProfile
       SecurityGroups:
