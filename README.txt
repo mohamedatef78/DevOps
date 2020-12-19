@@ -1,1 +1,1 @@
-http://devop-WebAp-17EKKBWU1K8O1-1241899376.us-west-2.elb.amazonaws.com
+http://udagr-webap-krjltqbd74x3-421181673.us-west-2.elb.amazonaws.com
